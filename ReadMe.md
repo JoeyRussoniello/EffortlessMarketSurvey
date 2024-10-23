@@ -3,6 +3,7 @@
 This project is a real-estate web scraper designed to extract compset data from apartments.com. It uses requests and Selenium to automate the process of collecting and parsing data for an input area to streamline the Market Survey process and make competitor comparison easy, efficient, and free. The data is saved into Outputs.csv by default, but export paths can be changed in the main.py function.
 
 ## Features
+- Automatic Chromedriver Updates, usable for all systems where chromedriver is available 
 - Dynamic Competitor Fetching/Filtering from an apartments.com search
 - Automatic data collection with customizable compset sizes
 - Built-in data formatting procedures w/ two options: 
@@ -10,11 +11,11 @@ This project is a real-estate web scraper designed to extract compset data from 
     - Individual Unit Availability list (useful for small portfolios to see the niche details)
 ## Requirements 
 The following dependencies must be installed to run the project:
-    beautifulsoup4==4.12.0
-    requests==2.31.0
-    pandas==2.1.1
-    selenium==4.14.0
-    numpy==1.26.0
+    - beautifulsoup4==4.12.0
+    - requests==2.31.0
+    - pandas==2.1.1
+    - selenium==4.14.0
+    - numpy==1.26.0
 You can install the required packages by running
 
 ``` bash
@@ -38,27 +39,27 @@ pip install -r requirements.txt
 ## Configuration
 To configure the scraper, modify the following settings in the config.json file
 
-- "platform", String: The operating platform used to install the chromedriver. 
+- **platform**, String: The operating platform used to install the chromedriver. 
     -Must be either ['linux64','mac-arm64','mac-x64','win32','win64']
-- "headless", Boolean: The Visisbility Status of the Opened Browser Window.
-- "verbose", Boolean: When set to true, running main will print more specifics on survey progress and actions.
-- "ncomps", Integer: Number of comps to Survey for each input property.
-- "input_path", String: Path to the input csv file - default 'Input.csv'.
-- "rollup", Boolean: When true rolls up the dataframe into a pivot table, when false leaves each individual apartment listing as its own entry
-- "output_path", String: Path to the output csv file - default 'Output.csv'.
-- "output_mode", String: The Output File Writing mode, "overwrite" completely overwrite the data and "append" will append data onto the existing file at output_path (relies on same headers).
+- **headless**, Boolean: The Visisbility Status of the Opened Browser Window.
+- **verbose**, Boolean: When set to true, running main will print more specifics on survey progress and actions.
+- **ncomps**, Integer: Number of comps to Survey for each input property.
+- **input_path**, String: Path to the input csv file - default 'Input.csv'.
+- **rollup**, Boolean: When true rolls up the dataframe into a pivot table, when false leaves each individual apartment listing as its own entry
+- **output_path**, String: Path to the output csv file - default 'Output.csv'.
+- **output_mode**, String: The Output File Writing mode, "overwrite" completely overwrite the data and "append" will append data onto the existing file at output_path (relies on same headers).
     -Must be either 'overwrite' or 'append'
 
 ### Default Configuration
-{
-    "platform": "win64",
-    "headless": true,
-    "verbose": true,
-    "ncomps": 5,
-    "input_path": "Input.csv",
-    "rollup": true,
-    "output_path": "Output.csv",
-    "output_mode": "append"
+{\
+    "platform": "win64",\
+    "headless": true,\
+    "verbose": true,\
+    "ncomps": 5,\
+    "input_path": "Input.csv",\
+    "rollup": true,\
+    "output_path": "Output.csv",\
+    "output_mode": "append"\
 }
 
 ## Usage
