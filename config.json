@@ -1,5 +1,5 @@
 {
-    "platform": "win-64",
+    "platform": "win64",
     "headless": true,
     "verbose": true,
     "ncomps": 5,
