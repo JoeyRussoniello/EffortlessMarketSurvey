@@ -1,6 +1,6 @@
 #To delete all instances of chromedriver for cleaning is: taskkill /F /IM chromedriver.exe /T
 
-#Imports
+#Webscraper selenium Imports
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -8,6 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.common.exceptions import TimeoutException
+#Pythonic Data Proccessing Imports
 import time
 import pandas as pd
 import numpy as np
@@ -90,21 +91,21 @@ class MarketSurvey():
         self.df.set_index("ID", inplace=True)
 
         for i in self.df.columns:
-            self.df.loc[self.df[i].apply(lambda i: True if re.search('^\\s*$', str(i)) else False), i] = None
+            self.df.loc[self.df[i].apply(lambda i: True if re.search('^\\s*$', str(i)) else False), i] = None #Replace whitespace characters with None values for all columns in the dataframe
 
-        self.df = self.df[self.df["Pricing"].str[0] == "$"]
+        self.df = self.df[self.df["Pricing"].str[0] == "$"] #Only gets pricing rows that have price values, indicated with dollar signs in Apartments.com
 
-        # Security Deposit - Remove extraneous text and convert to float
+        # Security Deposit - Remove extraneous text and attempt convert to float
         deposit = self.df["Security Deposit"]
-        numified_sd = deposit.apply(lambda x: x.partition(" deposit")[0][1:].replace(",", "") if type(x) == str else x).astype(float)
+        numified_sd = deposit.apply(pd.to_numeric(lambda x: x.partition(" deposit")[0][1:].replace(",", "") if type(x) == str else x,errors = "coerce"))
         self.df["Security Deposit"] = numified_sd
 
-        # Listed Rent 
+        # Listed Rent  - Remove comma separators, then convert to float
         rents = self.df["Pricing"]
         numified_rent = rents.apply(lambda x: x[1:].replace(",", "")).astype(float)
         self.df["Pricing"] = numified_rent
 
-        # Square feet
+        # Square feet - Remove comma separators, then convert to int
         self.df["Sqft"] = self.df["Sqft"].apply(lambda x: x.replace(",", "")).astype(int)
 
         # Bed/Baths concatenation and formatting
@@ -208,15 +209,28 @@ class MarketSurvey():
                 numfound += 1
     def rollup_df(self):
         df_excluded = self.df.drop(columns = ["Beds","Baths"])
-        grouped = df_excluded.groupby(['Area','Competitor','Bed/Baths','Report Date']).mean(numeric_only=True).round(2)
-        self.df = grouped
+        grouped_mean = df_excluded.groupby(['Area', 'Competitor', 'Bed/Baths', 'Report Date']).mean(numeric_only=True).round(2)
+
+        # Group by the same columns to count the number of rows in each group
+        grouped_count = df_excluded.groupby(['Area', 'Competitor', 'Bed/Baths', 'Report Date']).size().reset_index(name='Available Units')
+
+        # Merge the two results: mean values and the count of rows
+        self.df = grouped_mean.merge(grouped_count, on=['Area', 'Competitor', 'Bed/Baths', 'Report Date'])
     def full_survey(self,input_path,rollup = True):
         input_df = pd.read_csv(input_path)
-        for _,row in input_df.iterrows():
+        total_props = len(input_df)
+        #Get the dynamic competitor data for each area in the input dataframe
+        for index,row in input_df.iterrows():
             self.getAreaData(row["Area"],row["Property Name"],row["Min Price"],row["Max Price"])
+            if self.verbose == True:
+                print(f"Market Survey complete for {row['Area']}. Survey {np.round((index + 1)/total_props,4) * 100}% complete")
+        #Update dataframe with self-contained data
         self.df = pd.DataFrame(self.data)
+        #Close webdriver
         self.quit()
+        #Clean DataFrame (String to number correction with error coersion)
         self.clean_df()
+        #Condense data if asked
         if rollup:
             self.rollup_df()
     def write_output(self,mode,file_path):
@@ -228,5 +242,6 @@ class MarketSurvey():
             header = not pd.io.common.file_exists(file_path)  # Only include header if file doesn't exist
         else:
             raise ValueError("Mode must be 'overwrite' or 'append'")
-        
+        #Reset index applied to ensure pivot columns included in output
         self.df.reset_index().to_csv(file_path, mode=write_mode, header=header, index=False)
+        print(f"Data saved to {file_path}")

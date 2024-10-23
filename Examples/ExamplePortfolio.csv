@@ -1,0 +1,26 @@
+Area,Property Name,Min Price,Max Price
+"New York City, New York",Example New York City Property,2991,4497
+"Los Angeles, California",Example Los Angeles Property,2988,4494
+"Chicago, Illinois",Example Chicago Property,2962,4241
+"Houston, Texas",Example Houston Property,2940,4199
+"Phoenix, Arizona",Example Phoenix Property,2935,4196
+"Philadelphia, Pennsylvania",Example Philadelphia Property,2895,4181
+"San Antonio, Texas",Example San Antonio Property,2848,4109
+"San Diego, California",Example San Diego Property,2783,4068
+"Dallas, Texas",Example Dallas Property,2750,4033
+"Austin, Texas",Example Austin Property,2712,3988
+"Jacksonville, Florida",Example Jacksonville Property,2710,3983
+"San Jose, California",Example San Jose Property,2634,3951
+"Fort Worth, Texas",Example Fort Worth Property,2623,3946
+"Columbus, Ohio",Example Columbus Property,2612,3942
+"Charlotte, North Carolina",Example Charlotte Property,2547,3857
+"Indianapolis, Indiana",Example Indianapolis Property,2546,3855
+"San Francisco, California",Example San Francisco Property,2524,3830
+"Seattle, Washington",Example Seattle Property,2489,3742
+"Denver, Colorado",Example Denver Property,2424,3634
+"Oklahoma City, Oklahoma",Example Oklahoma City Property,2403,3580
+"Nashville, Tennessee",Example Nashville Property,2335,3566
+"El Paso, Texas",Example El Paso Property,2182,3535
+"Washington, D.C., District of Columbia",Example Washington Property,2170,3498
+"Las Vegas, Nevada",Example Las Vegas Property,2130,3446
+"Boston, Massachusetts",Example Boston Property,2020,3443
