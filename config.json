@@ -1,0 +1,10 @@
+{
+    "platform": "win-64",
+    "headless": true,
+    "verbose": true,
+    "ncomps": 5,
+    "input_path": "Input.csv",
+    "rollup": true,
+    "output_path": "Output.csv",
+    "output_mode": "append"
+}
