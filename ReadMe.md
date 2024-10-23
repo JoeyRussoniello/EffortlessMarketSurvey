@@ -11,11 +11,11 @@ This project is a real-estate web scraper designed to extract compset data from 
     - Individual Unit Availability list (useful for small portfolios to see the niche details)
 ## Requirements 
 The following dependencies must be installed to run the project:
-    - beautifulsoup4==4.12.0
-    - requests==2.31.0
-    - pandas==2.1.1
-    - selenium==4.14.0
-    - numpy==1.26.0
+    beautifulsoup4==4.12.0\
+    requests==2.31.0\
+    pandas==2.1.1\
+    selenium==4.14.0\
+    numpy==1.26.0\
 You can install the required packages by running
 
 ``` bash
@@ -51,16 +51,18 @@ To configure the scraper, modify the following settings in the config.json file
     -Must be either 'overwrite' or 'append'
 
 ### Default Configuration
-{\
-    "platform": "win64",\
-    "headless": true,\
-    "verbose": true,\
-    "ncomps": 5,\
-    "input_path": "Input.csv",\
-    "rollup": true,\
-    "output_path": "Output.csv",\
-    "output_mode": "append"\
+``` json
+{
+    "platform": "win64",
+    "headless": true,
+    "verbose": true,
+    "ncomps": 5,
+    "input_path": "Input.csv",
+    "rollup": true,
+    "output_path": "Output.csv",
+    "output_mode": "append"
 }
+```
 
 ## Usage
 Set up your Input.csv file (wherever it is stored) with the following columns. If you are using the Default Input.csv, some example listings are already present
