@@ -11,12 +11,12 @@ This project is a real-estate web scraper designed to extract compset data from 
     - Individual Unit Availability list (useful for small portfolios to see the niche details)
 ## Requirements 
 The following dependencies must be installed to run the project:
-    beautifulsoup4==4.12.0\
-    requests==2.31.0\
-    pandas==2.1.1\
-    selenium==4.14.0\
-    numpy==1.26.0\
-You can install the required packages by running
+    - beautifulsoup4==4.12.0
+    - requests==2.31.0
+    - pandas==2.1.1
+    - selenium==4.14.0
+    - numpy==1.26.0
+You can install the required packages by running:
 
 ``` bash
 pip install -r requirements.txt
