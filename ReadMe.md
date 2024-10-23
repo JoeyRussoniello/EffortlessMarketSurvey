@@ -41,8 +41,8 @@ pip install -r requirements.txt
 ## Configuration
 To configure the scraper, modify the following settings in the config.json file
 
-- **platform**, String: The operating platform used to install the chromedriver. 
-    -Must be either ['linux64','mac-arm64','mac-x64','win32','win64']
+- **platform**, String: The operating platform used to install the chromedriver.
+    - Must be either ['linux64','mac-arm64','mac-x64','win32','win64']
 - **headless**, Boolean: The Visisbility Status of the Opened Browser Window.
 - **verbose**, Boolean: When set to true, running main will print more specifics on survey progress and actions.
 - **ncomps**, Integer: Number of comps to Survey for each input property.
@@ -50,7 +50,7 @@ To configure the scraper, modify the following settings in the config.json file
 - **rollup**, Boolean: When true rolls up the dataframe into a pivot table, when false leaves each individual apartment listing as its own entry
 - **output_path**, String: Path to the output csv file - default 'Output.csv'.
 - **output_mode**, String: The Output File Writing mode, "overwrite" completely overwrite the data and "append" will append data onto the existing file at output_path (relies on same headers).
-    -Must be either 'overwrite' or 'append'
+    - Must be either 'overwrite' or 'append'
 
 ### Default Configuration
 ``` json
