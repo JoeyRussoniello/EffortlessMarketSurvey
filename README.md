@@ -10,6 +10,7 @@
 7. [Output](#output)
 8. [Dashboards](#dashboards)
    1. [Basic Market Summary (No Internal Data, Rolled Up)](#1-basic-market-summary-no-internal-data-rolled-up)
+   2. [Market Comparison (With Internal Data, Rolled Up)](#2-market-comparison-with-internal-data-rolled-up)
 9. [Future Improvements](#future-improvements)
 ## Project Description
 This project is a real-estate web scraper designed to extract compset data from apartments.com. It uses requests and Selenium to automate the process of collecting and parsing data for an input area to streamline the Market Survey process and make competitor comparison easy, efficient, and free. The data is saved into Outputs.csv by default, but export paths can be changed in the main.py function.
@@ -97,13 +98,16 @@ Output will be stored in CSV format, in the location of "output_path" found in c
 ## Dashboards
 Summarize your Market Survey Results in PreMade Dashboards!
 ### 1. Basic Market Summary (No Internal Data, Rolled Up)
-- Connect to Basic PowerBI Template by Opening the Market Survey Template.pbit in PowerBI desktop
+- Run EffortlessMarketSurvey to scrape the web into an output file, leave rollup = true in config.json
+- Open Dashboards\Market Survey Template.pbit in PowerBI desktop
 - Enter your local Output.csv file path to establish reporting connection
-  
+### 2. Market Comparison (With Internal Data, Rolled Up)
+- Run EffortlessMarketSurvey to scrape the web into an output file, leave rollup = true in config.json
+- Map your portfolio data into the format found in Examples\PortfolioOutput.csv
+- Open Dashboard\Market Comparison Dashboard.pbit in PowerBI desktop
+- Enter your local Output.csv file path and your local Portfolio_Performance.csv File Path to establish reporting connection
 ## Future Improvements
-- More prebuilt PowerBI Dashboard Templates
-    - With External Data (Used to compare your property with properties in the area)
-        - Useful for Sellers
+- More prebuilt PowerBI Dashboard Templates, and Image examples
     - BI Equivalents for data that hasn't been rolled up
 - Fixed Input Option for webscraping (provide a set list of links to peruse and return their values without dynamically fetching properties)
 - Further Updates to Large Example Input and Output datasets, and screenshots of their usage in Dashboards
