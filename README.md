@@ -1,4 +1,4 @@
-### EffortlessMarketSurvey
+# EffortlessMarketSurvey
 # Table of Contents
 1. [Project Description](#project-description)
 2. [Features](#features)
@@ -12,7 +12,7 @@
     2. [Market Comparison](#2-market-comparison-with-internal-data-rolled-up)
 8. [Future Improvements](#future-improvements)
 ## Project Description
-This project is a real-estate web scraper designed to extract compset data from apartments.com. It uses requests and Selenium to automate the process of collecting and parsing data for an input area to streamline the Market Survey process and make competitor comparison easy, efficient, and free. The data is saved into Outputs.csv by default, but export paths can be changed in the main.py function.
+EffortlessMarketSurvey is a robust real estate web scraper designed to automate market surveys, making competitor analysis easy and efficient. With seamless data collection from apartments.com and built-in Power BI dashboard templates, you can focus on strategic insights without worrying about manual data collection.
 
 ## Features
 - **Automatic Chromedriver Updates**: Ensures your scraper runs smoothly by always fetching the latest chromedriver.
@@ -35,7 +35,6 @@ You can install the required packages by running:
 pip install -r requirements.txt
 ```
 
-## Installation
 ## Installation
 ### Step 1: Prerequisites
 Ensure that you have installed:
