@@ -78,14 +78,20 @@ Run the scraper by executing the following command in the terminal:
 ``` bash
 python main.py
 ```
+
 ## Output
 Output will be stored in CSV format, in the location of "output_path" found in config.json
 
+## Dashboards
+Summarize your Market Survey Results in PreMade Dashboards!
+### 1. Basic Market Summary (No Internal Data, Rolled Up)
+- Connect to Basic PowerBI Template by Opening the Market Survey Template.pbit in PowerBI desktop
+- Enter your local Output.csv file path to establish reporting connection
+  
 ## Future Improvements
-- Prebuilt PowerBI Dashboard Templates
+- More prebuilt PowerBI Dashboard Templates
     - With External Data (Used to compare your property with properties in the area)
         - Useful for Sellers
-    - Without External Data (Used to gauge the prices of apartments in area without local comparison)
-        - Useful for Buyers
-- Fixed Input Scraping Options (provide a set list of links to peruse and return their values without dynamically fetching properties)
-- Large Example Input and Output datasets, and screenshots of their usage in Dashboards
+    - BI Equivalents for data that hasn't been rolled up
+- Fixed Input Option for webscraping (provide a set list of links to peruse and return their values without dynamically fetching properties)
+- Further Updates to Large Example Input and Output datasets, and screenshots of their usage in Dashboards
