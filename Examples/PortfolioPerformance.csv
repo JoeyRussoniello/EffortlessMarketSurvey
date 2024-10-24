@@ -1,0 +1,37 @@
+Property,Report Date,Unit Type,Available Units,Market Rent,Sq. Ft
+Example New York City Property,2024-10-23,0 Bed 1 Bath,15,2991,450
+Example New York City Property,2024-10-23,1 Bed 1 Bath,10,3250,650
+Example New York City Property,2024-10-23,2 Bed 2 Bath,8,4100,850
+Example New York City Property,2024-10-24,0 Bed 1 Bath,14,2992,450
+Example New York City Property,2024-10-24,1 Bed 1 Bath,10,3251,650
+Example New York City Property,2024-10-24,2 Bed 2 Bath,8,4102,850
+Example Los Angeles Property,2024-10-23,0 Bed 1 Bath,12,2988,425
+Example Los Angeles Property,2024-10-23,1 Bed 1 Bath,8,3220,625
+Example Los Angeles Property,2024-10-23,2 Bed 2 Bath,5,4040,825
+Example Los Angeles Property,2024-10-24,0 Bed 1 Bath,12,2989,425
+Example Los Angeles Property,2024-10-24,1 Bed 1 Bath,8,3221,625
+Example Los Angeles Property,2024-10-24,2 Bed 2 Bath,5,4042,825
+Example Chicago Property,2024-10-23,0 Bed 1 Bath,10,2962,430
+Example Chicago Property,2024-10-23,1 Bed 1 Bath,7,3175,630
+Example Chicago Property,2024-10-23,2 Bed 2 Bath,6,3975,830
+Example Chicago Property,2024-10-24,0 Bed 1 Bath,9,2963,430
+Example Chicago Property,2024-10-24,1 Bed 1 Bath,7,3176,630
+Example Chicago Property,2024-10-24,2 Bed 2 Bath,6,3978,830
+Example Houston Property,2024-10-23,0 Bed 1 Bath,8,2940,440
+Example Houston Property,2024-10-23,1 Bed 1 Bath,6,3150,640
+Example Houston Property,2024-10-23,2 Bed 2 Bath,4,3925,840
+Example Houston Property,2024-10-24,0 Bed 1 Bath,8,2942,440
+Example Houston Property,2024-10-24,1 Bed 1 Bath,6,3152,640
+Example Houston Property,2024-10-24,2 Bed 2 Bath,4,3927,840
+Example Boston Property,2024-10-23,0 Bed 1 Bath,9,2935,415
+Example Boston Property,2024-10-23,1 Bed 1 Bath,6,3100,615
+Example Boston Property,2024-10-23,2 Bed 2 Bath,5,3895,815
+Example Boston Property,2024-10-24,0 Bed 1 Bath,8,2936,415
+Example Boston Property,2024-10-24,1 Bed 1 Bath,6,3101,615
+Example Boston Property,2024-10-24,2 Bed 2 Bath,5,3896,815
+Example Philadelphia Property,2024-10-23,0 Bed 1 Bath,11,2895,420
+Example Philadelphia Property,2024-10-23,1 Bed 1 Bath,7,3070,620
+Example Philadelphia Property,2024-10-23,2 Bed 2 Bath,5,3800,820
+Example Philadelphia Property,2024-10-24,0 Bed 1 Bath,11,2897,420
+Example Philadelphia Property,2024-10-24,1 Bed 1 Bath,7,3072,620
+Example Philadelphia Property,2024-10-24,2 Bed 2 Bath,5,3802,820
