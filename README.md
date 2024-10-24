@@ -1,4 +1,16 @@
 ### EffortlessMarketSurvey
+# Table of Contents
+1. [Project Description](#project-description)
+2. [Features](#features)
+3. [Requirements](#requirements)
+4. [Installation](#installation)
+5. [Configuration](#configuration)
+   1. [Default Configuration](#default-configuration)
+6. [Usage](#usage)
+7. [Output](#output)
+8. [Dashboards](#dashboards)
+   1. [Basic Market Summary (No Internal Data, Rolled Up)](#1-basic-market-summary-no-internal-data-rolled-up)
+9. [Future Improvements](#future-improvements)
 ## Project Description
 This project is a real-estate web scraper designed to extract compset data from apartments.com. It uses requests and Selenium to automate the process of collecting and parsing data for an input area to streamline the Market Survey process and make competitor comparison easy, efficient, and free. The data is saved into Outputs.csv by default, but export paths can be changed in the main.py function.
 
