@@ -63,9 +63,9 @@ class MarketSurvey():
         button.click()
         #Wait unitl new page is opened
         try:
-            WebDriverWait(self.driver,10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "a.property-link")))
-        except TimeoutError:
-            print("This took too long")
+            WebDriverWait(self.driver,20).until(EC.presence_of_element_located((By.CSS_SELECTOR, "a.property-link")))
+        except TimeoutException:
+            print("Finding this area took too long (>20 seconds)")
     def filterArea(self,min_price = None,max_price = None):
         filter_button = self.driver.find_element(By.ID, "rentRangeLink")
         filter_button.click()
@@ -117,7 +117,7 @@ class MarketSurvey():
         #Wait until page loads
         try:
             WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "h1.propertyName")))
-        except TimeoutError:
+        except TimeoutException:
             return
         
         #Find details
