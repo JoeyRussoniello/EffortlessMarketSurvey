@@ -1,10 +1,11 @@
 {
-    "platform": "win64",
-    "headless": true,
-    "verbose": true,
-    "ncomps": 5,
-    "input_path": "Input.csv",
-    "rollup": true,
-    "output_path": "Output.csv",
-    "output_mode": "append"
+    "platform": "win64",    
+    "headless": true,    
+    "verbose": true,        
+    "ncomps": 5,      
+    "input_path": "Input.csv",  
+    "rollup": true,           
+    "output_path": "Output.csv", 
+    "output_mode": "append" ,  
+    "parallel_members": 0 
 }

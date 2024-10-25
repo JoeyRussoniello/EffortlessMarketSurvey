@@ -14,7 +14,7 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 import re
-
+from concurrent.futures import ThreadPoolExecutor, as_completed
 # Get today's date
 today = datetime.today()
 # Format the date as YYYY MM DD
@@ -245,3 +245,44 @@ class MarketSurvey():
         #Reset index applied to ensure pivot columns included in output
         self.df.reset_index().to_csv(file_path, mode=write_mode, header=header, index=False)
         print(f"Data saved to {file_path}")
+        
+class MarketSurveyParallel(MarketSurvey):
+    @staticmethod
+    def process_area_data(row, ncomps, headless=True, verbose=False):
+        """Helper method for parallel execution of area data scraping"""
+        #Create a nested Market Survey Object (inits a new driver)
+        survey = MarketSurvey(headless=headless, verbose=verbose, ncomps=ncomps)
+        survey.getAreaData(row["Area"], row["Property Name"], row.get("Min Price"), row.get("Max Price"))
+        survey.quit()  # Close the webdriver for this instance
+        return survey.data  # Return the scraped data
+
+    def full_survey_parallel(self, input_path, rollup=True, max_workers=4):
+        #Parallel Version of Market Survey, opens multiple windows
+        input_df = pd.read_csv(input_path)
+        all_data = []
+        #Oppen parallel processors for each market survey
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            futures = [
+                executor.submit(
+                    MarketSurveyParallel.process_area_data,
+                    row,
+                    self.ncomps,
+                    self.verbose
+                ) for _, row in input_df.iterrows()
+            ]
+
+            for future in as_completed(futures):
+                try:
+                    data = future.result()
+                    all_data.extend(data)  # Collect data from each future
+                except Exception as e:
+                    print(f"Error encountered: {e}")
+
+        # Combine all collected data into the main DataFrame
+        self.df = pd.DataFrame(all_data)
+        self.clean_df()  # Clean data if necessary
+        if rollup:
+            self.rollup_df()
+
+    def write_output(self, mode, file_path):
+        super().write_output(mode, file_path)

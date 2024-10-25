@@ -15,6 +15,7 @@
 EffortlessMarketSurvey is a robust real estate web scraper designed to automate market surveys, making competitor analysis easy and efficient. With seamless data collection from apartments.com and built-in Power BI dashboard templates, you can focus on strategic insights without worrying about manual data collection.
 
 ## Features
+- **Parallel Data Processing**: Run multiple property surveys simultaneously, significantly reducing total runtime for large inputs.
 - **Automatic Chromedriver Updates**: Ensures your scraper runs smoothly by always fetching the latest chromedriver.
 - **Dynamic Competitor Fetching**: Customize the competitor search for relevancy on apartments.com.
 - **Customizable Data Collection**: Tailor the scraper to return only the data you need, with options to specify the number of properties.
@@ -68,6 +69,7 @@ Customize the scraper by editing the settings in the `config.json` file.
 - **rollup**: When `true`, data will be summarized into a pivot table. When `false`, individual listings are shown.
 - **output_path**: Path to the output CSV file (default: `Output.csv`).
 - **output_mode**: File writing mode (`overwrite` or `append`).
+- **parallel_members**: Amount of parallel instances to open at once (default: `4`). Set to 0 for no parallelism.
 
 ### Default Configuration
 ```json
@@ -79,11 +81,15 @@ Customize the scraper by editing the settings in the `config.json` file.
     "input_path": "Input.csv",   // Input file path
     "rollup": true,             // Roll-up summary to preserve space
     "output_path": "Output.csv", // Output file path
-    "output_mode": "append"      // Append to existing output instead of overwriting
+    "output_mode": "append" ,    // Append to existing output instead of overwriting
+    "parallel_members": 0        // Do not use parallel members for web scraping
 }
 ```
+*Warning: Enabling parallelism for scraping multiple properties can significantly increase computational cost and may impact performance, especially on systems with limited resources. Running in parallel requires more CPU and memory, which may lead to high system load or throttling on low-power devices. Adjust parallel_members based on your system capacity to prevent potential slowdowns or crashes.*
 
 ## Usage
+Set up the `config.json` file with your preferred settings and Operating System
+
 Set up your `Input.csv` file with the following columns (example data included):
 
 | Area          | Property Name     | Min Price | Max Price |
@@ -103,7 +109,7 @@ python main.py
 ```
 
 ## Dashboards
-EffortlessMarketSurvey includes two Power BI dashboard templates to help visualize your market survey results:
+EffortlessMarketSurvey currently includes two Power BI dashboard templates to help visualize your market survey results:
 
 ### 1. Basic Market Summary (No Internal Data, Rolled Up)
 This dashboard gives you a high-level overview of competitor properties.
