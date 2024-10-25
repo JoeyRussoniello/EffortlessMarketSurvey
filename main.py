@@ -17,7 +17,7 @@ OUTPUT_MODE = config['output_mode']
 PARALLEL = config['parallel_members']
 
 #Update the chrome drivers
-#update_driver(PLATFORM)
+update_driver(PLATFORM)
 if PARALLEL == 0:    
     #Perform Market Survey Without Any Parallelism
     survey = MarketSurvey(headless = HEADLESS, verbose = VERBOSE, ncomps = NCOMPS) #Initialize Market Survey with parameter inputs
