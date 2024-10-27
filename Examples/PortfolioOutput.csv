@@ -767,3 +767,405 @@ index,Area,Competitor,Bed/Baths,Report Date,Pricing,Sqft,Available Units
 193,Example Washington Property,The Florian,1 Bed 1 Bath,10/25/2024,2253.33,611.0,3
 194,Example Washington Property,The MO,1 Bed 1 Bath,10/25/2024,2588.36,700.91,11
 195,Example Washington Property,The MO,2 Bed 2 Bath,10/25/2024,3230.5,1053.75,4
+0,Example Austin Property,Bell Austin Southwest,1 Bed 1 Bath,10/26/2024,1402.0,906.0,1
+1,Example Austin Property,Bell Austin Southwest,2 Bed 2 Bath,10/26/2024,1932.67,1203.0,3
+2,Example Austin Property,Chevy Chase,2 Bed 2 Bath,10/26/2024,1835.0,1260.0,1
+3,Example Austin Property,Chevy Chase,3 Bed 2 Bath,10/26/2024,1980.5,1340.0,2
+4,Example Austin Property,Chevy Chase,3 Bed 2.5 Bath,10/26/2024,2173.5,1510.0,2
+5,Example Austin Property,Fifteen15 S Lamar Apartments,2 Bed 2 Bath,10/26/2024,2800.0,1272.0,1
+6,Example Austin Property,Sabina,2 Bed 2 Bath,10/26/2024,2578.0,1195.0,1
+7,Example Austin Property,Westerly 360,2 Bed 2 Bath,10/26/2024,2347.67,1129.67,3
+8,Example Boston Property,1410 Columbia,1 Bed 1 Bath,10/26/2024,2800.0,591.0,2
+9,Example Boston Property,1410 Columbia,2 Bed 1 Bath,10/26/2024,3133.33,792.67,3
+10,Example Boston Property,345 Harrison,0 Bed 1 Bath,10/26/2024,3189.0,471.08,12
+11,Example Boston Property,345 Harrison,1 Bed 1 Bath,10/26/2024,3425.0,571.0,1
+12,Example Boston Property,7INK,0 Bed 1 Bath,10/26/2024,3370.67,301.33,3
+13,Example Boston Property,7INK,3 Bed 2 Bath,10/26/2024,2412.0,236.0,1
+14,Example Boston Property,One Greenway,1 Bed 1 Bath,10/26/2024,3405.5,688.5,2
+15,Example Boston Property,South Standard,0 Bed 1 Bath,10/26/2024,2711.67,471.0,3
+16,Example Charlotte Property,Link Apartments® Montford,2 Bed 2 Bath,10/26/2024,2214.7,1101.2,10
+17,Example Charlotte Property,NOVEL Mallard Creek by Crescent Communities,2 Bed 2 Bath,10/26/2024,2575.0,1178.75,4
+18,Example Charlotte Property,The Colony,2 Bed 2 Bath,10/26/2024,2839.0,1190.2,5
+19,Example Charlotte Property,The Edge,2 Bed 2 Bath,10/26/2024,2741.67,1339.83,6
+20,Example Charlotte Property,The Ellis,2 Bed 2 Bath,10/26/2024,2677.17,1301.0,6
+21,Example Charlotte Property,The Ellis,2 Bed 2.5 Bath,10/26/2024,3726.0,1757.0,1
+22,Example Chicago Property,180 North Jefferson,2 Bed 1 Bath,10/26/2024,3097.0,930.0,1
+23,Example Chicago Property,180 North Jefferson,2 Bed 2 Bath,10/26/2024,4079.33,1200.0,3
+24,Example Chicago Property,Post,2 Bed 2 Bath,10/26/2024,3704.0,852.0,2
+25,Example Chicago Property,Presidential Towers,0 Bed 1 Bath,10/26/2024,1603.33,505.0,3
+26,Example Chicago Property,Sentral Michigan Avenue,0 Bed 1 Bath,10/26/2024,2269.0,528.0,5
+27,Example Chicago Property,The 808 Cleveland,2 Bed 2 Bath,10/26/2024,3837.0,1108.0,2
+28,Example Columbus Property,Building B at Gravity,2 Bed 2 Bath,10/26/2024,3548.75,1425.5,4
+29,Example Columbus Property,Library Park,2 Bed 2 Bath,10/26/2024,2865.5,1188.0,2
+30,Example Columbus Property,ONE AT THE PENINSULA,1 Bed 1 Bath,10/26/2024,3427.67,746.0,3
+31,Example Columbus Property,ONE AT THE PENINSULA,2 Bed 2 Bath,10/26/2024,2795.5,1069.67,6
+32,Example Columbus Property,The Sage at Jeffrey Park,2 Bed 2 Bath,10/26/2024,2280.25,980.0,4
+33,Example Columbus Property,The Thomas at GVX,2 Bed 2 Bath,10/26/2024,3058.33,1125.33,3
+34,Example Columbus Property,The Thomas at GVX,3 Bed 2 Bath,10/26/2024,2807.0,1308.0,1
+35,Example Dallas Property,Bandera at Preston Hollow,1 Bed 1.5 Bath,10/26/2024,3662.0,1732.0,1
+36,Example Dallas Property,Bandera at Preston Hollow,2 Bed 2 Bath,10/26/2024,3046.0,1396.0,1
+37,Example Dallas Property,Gables Villa Rosa,1 Bed 1 Bath,10/26/2024,2044.67,756.0,3
+38,Example Dallas Property,The Nash,2 Bed 2 Bath,10/26/2024,2522.0,1552.0,1
+39,Example Dallas Property,The Nash,3 Bed 2 Bath,10/26/2024,2536.0,1500.0,1
+40,Example Dallas Property,The National Residences,1 Bed 1 Bath,10/26/2024,3259.17,966.72,18
+41,Example Dallas Property,The National Residences,2 Bed 2 Bath,10/26/2024,3745.0,1242.0,1
+42,Example Dallas Property,The Statler Residences,1 Bed 1.5 Bath,10/26/2024,2100.67,902.0,3
+43,Example Denver Property,3000 Huron,1 Bed 1 Bath,10/26/2024,2612.5,852.5,2
+44,Example Denver Property,3000 Huron,2 Bed 2 Bath,10/26/2024,2890.0,966.0,3
+45,Example Denver Property,Airie Apartments,2 Bed 2 Bath,10/26/2024,2553.11,1158.33,9
+46,Example Denver Property,Airie Apartments,3 Bed 2 Bath,10/26/2024,3516.0,1520.0,1
+47,Example Denver Property,Alloy Sunnyside,1 Bed 1 Bath,10/26/2024,2567.75,728.0,4
+48,Example Denver Property,Alloy Sunnyside,2 Bed 2 Bath,10/26/2024,2846.0,1012.5,14
+49,Example Denver Property,Avalon Governors Park,1 Bed 1 Bath,10/26/2024,2621.67,853.0,3
+50,Example Denver Property,MAA Milepost 35,2 Bed 2 Bath,10/26/2024,2486.33,1091.0,3
+51,Example El Paso Property,Desert Commons East,3 Bed 2 Bath,10/26/2024,2050.0,1378.0,2
+52,Example El Paso Property,Lifestyles at Hueco Valley,3 Bed 2 Bath,10/26/2024,1668.0,1443.75,4
+53,Example El Paso Property,Lifestyles at Pellicano,2 Bed 1 Bath,10/26/2024,1515.0,876.0,1
+54,Example El Paso Property,Lifestyles at Pellicano,2 Bed 2 Bath,10/26/2024,1570.33,1048.67,3
+55,Example El Paso Property,Lifestyles at Pellicano,3 Bed 2 Bath,10/26/2024,1648.0,1214.67,3
+56,Example El Paso Property,Luxx Verge Villas,3 Bed 2.5 Bath,10/26/2024,3175.0,1871.0,1
+57,Example El Paso Property,Luxx Verge Villas,3 Bed 3 Bath,10/26/2024,2100.0,1829.5,2
+58,Example El Paso Property,Retreat at Mesa Hills,2 Bed 2.5 Bath,10/26/2024,1920.0,1556.0,1
+59,Example El Paso Property,Retreat at Mesa Hills,3 Bed 2 Bath,10/26/2024,2170.0,2127.0,1
+60,Example Fort Worth Property,Atlas Waterside,2 Bed 2 Bath,10/26/2024,2650.29,1326.0,7
+61,Example Fort Worth Property,Bexley at Left Bank,2 Bed 2 Bath,10/26/2024,2642.75,1266.0,4
+62,Example Fort Worth Property,Bexley at Left Bank,2 Bed 2.5 Bath,10/26/2024,3097.75,1535.5,4
+63,Example Fort Worth Property,Madera at Leftbank,3 Bed 3 Bath,10/26/2024,3759.0,2792.0,2
+64,Example Fort Worth Property,The Cooper,0 Bed 1 Bath,10/26/2024,1222.0,540.0,3
+65,Example Fort Worth Property,The Cooper,1 Bed 1 Bath,10/26/2024,1335.0,600.0,3
+66,Example Fort Worth Property,Westhouse Flats,2 Bed 2 Bath,10/26/2024,1900.0,1206.0,1
+67,Example Fort Worth Property,Westhouse Flats,3 Bed 2 Bath,10/26/2024,2360.0,1388.0,3
+68,Example Houston Property,Domain Heights,1 Bed 1 Bath,10/26/2024,1810.33,717.0,3
+69,Example Houston Property,Domain Heights,2 Bed 2 Bath,10/26/2024,2456.33,1185.5,6
+70,Example Houston Property,Gramercy Park,2 Bed 2 Bath,10/26/2024,1395.0,1116.0,2
+71,Example Houston Property,Hayworth,1 Bed 2 Bath,10/26/2024,2688.0,1542.0,1
+72,Example Houston Property,Hayworth,2 Bed 2 Bath,10/26/2024,3003.83,1438.08,12
+73,Example Houston Property,Hayworth,2 Bed 2.5 Bath,10/26/2024,3494.43,1821.14,7
+74,Example Houston Property,Lumen,2 Bed 2 Bath,10/26/2024,2747.67,1213.0,3
+75,Example Houston Property,Providence Uptown,3 Bed 2 Bath,10/26/2024,2073.0,1396.0,1
+76,Example Indianapolis Property,9 on Canal,3 Bed 3 Bath,10/26/2024,3100.0,1244.0,3
+77,Example Indianapolis Property,Cosmopolitan on the Canal,2 Bed 2 Bath,10/26/2024,2702.5,1551.0,2
+78,Example Indianapolis Property,Industry Indianapolis,2 Bed 2 Bath,10/26/2024,3356.54,1182.08,13
+79,Example Indianapolis Property,River Place Flats,3 Bed 2 Bath,10/26/2024,2695.67,1410.0,3
+80,Example Indianapolis Property,The Boardwalk at Westlake Apartments and T...,2 Bed 1.5 Bath,10/26/2024,1718.33,1067.0,3
+81,Example Indianapolis Property,The Boardwalk at Westlake Apartments and T...,3 Bed 1.5 Bath,10/26/2024,1865.0,1200.0,1
+82,Example Jacksonville Property,Bainbridge Avenues Walk,2 Bed 2 Bath,10/26/2024,1880.67,1201.0,3
+83,Example Jacksonville Property,Pinnacle,3 Bed 2.5 Bath,10/26/2024,2874.0,1584.0,3
+84,Example Jacksonville Property,Presidium Park,3 Bed 3 Bath,10/26/2024,2724.0,1560.0,1
+85,Example Jacksonville Property,River House,2 Bed 2 Bath,10/26/2024,2950.0,1108.0,2
+86,Example Jacksonville Property,River House,3 Bed 3 Bath,10/26/2024,3130.0,1592.0,2
+87,Example Jacksonville Property,Terraces at Town Center,1 Bed 1 Bath,10/26/2024,1370.0,898.0,1
+88,Example Jacksonville Property,Terraces at Town Center,2 Bed 2 Bath,10/26/2024,1840.33,1203.0,3
+89,Example Las Vegas Property,Aspire at Echelon,2 Bed 2 Bath,10/26/2024,2530.5,1089.25,4
+90,Example Las Vegas Property,Aspire at Flamingo Grand,1 Bed 1 Bath,10/26/2024,2196.0,724.0,1
+91,Example Las Vegas Property,Aspire at Flamingo Grand,2 Bed 2 Bath,10/26/2024,2427.27,1144.09,11
+92,Example Las Vegas Property,Aspire at Redwood,1 Bed 1 Bath,10/26/2024,2196.0,689.0,1
+93,Example Las Vegas Property,Aspire at Redwood,2 Bed 2 Bath,10/26/2024,2499.5,958.3,10
+94,Example Las Vegas Property,LVB,1 Bed 1 Bath,10/26/2024,1827.43,738.43,7
+95,Example Las Vegas Property,LVB,2 Bed 2 Bath,10/26/2024,1791.67,985.0,3
+96,Example Las Vegas Property,The Michael B Townhomes and Flats,2 Bed 1 Bath,10/26/2024,1720.0,962.0,1
+97,Example Las Vegas Property,The Michael B Townhomes and Flats,2 Bed 2 Bath,10/26/2024,1976.67,1004.0,3
+98,Example Las Vegas Property,The Michael B Townhomes and Flats,2 Bed 2.5 Bath,10/26/2024,2025.0,1152.0,3
+99,Example Los Angeles Property,ARQ,1 Bed 1 Bath,10/26/2024,3713.33,671.0,6
+100,Example Los Angeles Property,Residences at West Edge,0 Bed 1 Bath,10/26/2024,2958.0,425.67,3
+101,Example Los Angeles Property,Residences at West Edge,1 Bed 1 Bath,10/26/2024,3636.14,649.14,7
+102,Example Los Angeles Property,The Parker,0 Bed 1 Bath,10/26/2024,2419.5,477.0,2
+103,Example Los Angeles Property,The Parker,1 Bed 1 Bath,10/26/2024,3837.0,661.0,2
+104,Example Los Angeles Property,The Parker,2 Bed 2 Bath,10/26/2024,4084.5,1071.5,4
+105,Example Los Angeles Property,Zephyr Koreatown,2 Bed 2 Bath,10/26/2024,3092.5,1151.0,2
+106,Example Los Angeles Property,sageLA - Brand New,0 Bed 1 Bath,10/26/2024,2514.0,555.25,4
+107,Example Nashville Property,445 Park Commons,2 Bed 2 Bath,10/26/2024,2599.0,1190.0,3
+108,Example Nashville Property,8th & Berry,1 Bed 1 Bath,10/26/2024,1740.67,756.67,6
+109,Example Nashville Property,8th & Berry,2 Bed 2 Bath,10/26/2024,2093.33,1145.0,3
+110,Example Nashville Property,Flats at Laurel and Pine Apartments,3 Bed 2 Bath,10/26/2024,3200.0,2394.0,1
+111,Example Nashville Property,Livano Trinity,2 Bed 2 Bath,10/26/2024,2055.33,1060.0,3
+112,Example Nashville Property,Prima at Paseo South Gulch,1 Bed 1 Bath,10/26/2024,2485.0,741.0,3
+113,Example New York City Property,1515 Surf,1 Bed 1 Bath,10/26/2024,3161.67,614.0,18
+114,Example New York City Property,1515 Surf,2 Bed 1 Bath,10/26/2024,3322.86,673.14,7
+115,Example New York City Property,Avalon Amityville,1 Bed 1 Bath,10/26/2024,3405.0,825.0,6
+116,Example New York City Property,Avalon Amityville,2 Bed 2 Bath,10/26/2024,4119.0,1304.2,5
+117,Example New York City Property,Avalon Amityville,3 Bed 2 Bath,10/26/2024,4420.0,1337.0,2
+118,Example New York City Property,Cornerstone Westbury,0 Bed 1 Bath,10/26/2024,3095.0,560.0,1
+119,Example New York City Property,Cornerstone Westbury,1 Bed 1 Bath,10/26/2024,3552.18,795.55,11
+120,Example New York City Property,Heritage Spy Ring Golf Club,2 Bed 2 Bath,10/26/2024,3886.5,1286.0,4
+121,Example New York City Property,Heritage Spy Ring Golf Club,3 Bed 2 Bath,10/26/2024,3995.0,1494.0,1
+122,Example New York City Property,The Belmont at Eastview,1 Bed 1 Bath,10/26/2024,3164.25,848.25,4
+123,Example Oklahoma City Property,Broadvue Apartments,3 Bed 2 Bath,10/26/2024,2460.0,1382.0,1
+124,Example Oklahoma City Property,Magnolia Row,3 Bed 3 Bath,10/26/2024,2500.0,1440.0,1
+125,Example Oklahoma City Property,Metropolitan,2 Bed 2 Bath,10/26/2024,2540.0,1175.67,3
+126,Example Oklahoma City Property,Metropolitan,3 Bed 2 Bath,10/26/2024,2476.0,1449.0,1
+127,Example Oklahoma City Property,Metropolitan,3 Bed 3 Bath,10/26/2024,2745.0,1558.0,3
+128,Example Oklahoma City Property,The First Residences at First National,1 Bed 1 Bath,10/26/2024,2695.75,921.0,4
+129,Example Oklahoma City Property,Trulo Homes Quail Village,3 Bed 2 Bath,10/26/2024,1817.0,1250.0,3
+130,Example Philadelphia Property,1500 Locust,1 Bed 1 Bath,10/26/2024,2270.83,860.0,6
+131,Example Philadelphia Property,Chestnut Hill Village Apartments,3 Bed 2.5 Bath,10/26/2024,2998.0,2000.0,3
+132,Example Philadelphia Property,Domus,1 Bed 1 Bath,10/26/2024,3300.0,820.4,5
+133,Example Philadelphia Property,Domus,2 Bed 2 Bath,10/26/2024,4047.0,1403.5,2
+134,Example Philadelphia Property,Evo at Cira Centre South,0 Bed 1 Bath,10/26/2024,3340.0,563.0,1
+135,Example Philadelphia Property,Evo at Cira Centre South,3 Bed 3 Bath,10/26/2024,4110.0,1080.0,1
+136,Example Philadelphia Property,Presidential City,2 Bed 2 Bath,10/26/2024,3429.5,1500.0,2
+137,Example Philadelphia Property,Presidential City,3 Bed 3 Bath,10/26/2024,3348.25,1450.0,4
+138,Example Phoenix Property,AVE Phoenix Sky,1 Bed 1 Bath,10/26/2024,3013.17,970.5,6
+139,Example Phoenix Property,AVE Phoenix Sky,1 Bed 1.5 Bath,10/26/2024,3110.0,1110.0,3
+140,Example Phoenix Property,AVE Phoenix Sky,2 Bed 2 Bath,10/26/2024,3699.27,1249.36,11
+141,Example Phoenix Property,Bloom at Deer Valley,3 Bed 2 Bath,10/26/2024,2955.0,1303.0,1
+142,Example Phoenix Property,Montreux Luxury Apartments,1 Bed 1 Bath,10/26/2024,3069.0,888.0,1
+143,Example Phoenix Property,Montreux Luxury Apartments,3 Bed 2 Bath,10/26/2024,3277.67,1517.0,3
+144,Example Phoenix Property,Roosevelt Point,3 Bed 3 Bath,10/26/2024,2946.0,1050.0,3
+145,Example Phoenix Property,San Valiente,2 Bed 2 Bath,10/26/2024,1400.67,1014.0,3
+146,Example San Antonio Property,7600 Broadway,1 Bed 1 Bath,10/26/2024,3064.0,1084.0,1
+147,Example San Antonio Property,7600 Broadway,1 Bed 1.5 Bath,10/26/2024,3136.0,1095.0,1
+148,Example San Antonio Property,7600 Broadway,2 Bed 2 Bath,10/26/2024,3468.33,1455.67,3
+149,Example San Antonio Property,7600 Broadway,2 Bed 2.5 Bath,10/26/2024,3807.0,1461.0,1
+150,Example San Antonio Property,Cypress at Stone Oak,2 Bed 2 Bath,10/26/2024,3049.0,1783.0,1
+151,Example San Antonio Property,Cypress at Stone Oak,3 Bed 2 Bath,10/26/2024,2899.0,2494.0,1
+152,Example San Antonio Property,Cypress at Stone Oak,4 Bed 3 Bath,10/26/2024,2799.0,2322.0,1
+153,Example San Antonio Property,Cypress at Stone Oak,5 Bed 4 Bath,10/26/2024,4099.0,3274.0,1
+154,Example San Antonio Property,Marquis Dominion,3 Bed 2 Bath,10/26/2024,2010.0,1502.5,4
+155,Example San Antonio Property,Marquis on Evans,2 Bed 2 Bath,10/26/2024,1720.0,1183.0,1
+156,Example San Antonio Property,Marquis on Evans,3 Bed 2 Bath,10/26/2024,1942.0,1318.0,1
+157,Example San Antonio Property,The Josephine,2 Bed 2 Bath,10/26/2024,3250.0,1232.8,5
+158,Example San Antonio Property,The Josephine,3 Bed 2 Bath,10/26/2024,3915.0,1451.2,5
+159,Example San Diego Property,2911 Adams,3 Bed 1 Bath,10/26/2024,3596.67,815.0,3
+160,Example San Diego Property,Bevel Apartments,0 Bed 1 Bath,10/26/2024,2554.33,519.67,3
+161,Example San Diego Property,Denizen,1 Bed 1 Bath,10/26/2024,3128.45,676.73,11
+162,Example San Diego Property,Mason,2 Bed 2.5 Bath,10/26/2024,3299.0,1168.0,3
+163,Example San Diego Property,Ruby at The Society,1 Bed 1 Bath,10/26/2024,2998.0,675.0,2
+164,Example San Diego Property,Ruby at The Society,2 Bed 2 Bath,10/26/2024,3743.5,1122.0,2
+165,Example San Francisco Property,100 Van Ness,0 Bed 1 Bath,10/26/2024,3405.0,439.0,3
+166,Example San Francisco Property,100 Van Ness,1 Bed 1 Bath,10/26/2024,3770.0,641.0,1
+167,Example San Francisco Property,2000 Post,0 Bed 1 Bath,10/26/2024,2740.8,518.4,5
+168,Example San Francisco Property,2000 Post,1 Bed 1 Bath,10/26/2024,2957.67,625.0,3
+169,Example San Francisco Property,Channel Mission Bay,0 Bed 1 Bath,10/26/2024,3121.0,499.67,3
+170,Example San Francisco Property,Channel Mission Bay,1 Bed 1 Bath,10/26/2024,3664.0,703.0,2
+171,Example San Francisco Property,Edgewater,1 Bed 1 Bath,10/26/2024,3119.67,635.0,3
+172,Example San Francisco Property,Edgewater,1 Bed 1.5 Bath,10/26/2024,3347.5,750.0,2
+173,Example San Francisco Property,NEMA,0 Bed 1 Bath,10/26/2024,3070.0,476.0,3
+174,Example San Jose Property,DUO Apartments,0 Bed 1 Bath,10/26/2024,2612.5,561.0,2
+175,Example San Jose Property,DUO Apartments,1 Bed 1 Bath,10/26/2024,2702.5,787.75,4
+176,Example San Jose Property,DUO Apartments,2 Bed 2 Bath,10/26/2024,3361.25,1114.25,4
+177,Example San Jose Property,Hanover Winchester,1 Bed 1 Bath,10/26/2024,3446.67,768.0,12
+178,Example San Jose Property,Miro,0 Bed 1 Bath,10/26/2024,3132.33,623.67,3
+179,Example San Jose Property,The Fay,0 Bed 1 Bath,10/26/2024,1857.0,366.0,3
+180,Example San Jose Property,eaves West Valley,1 Bed 1 Bath,10/26/2024,2818.33,732.0,3
+181,Example San Jose Property,eaves West Valley,2 Bed 2 Bath,10/26/2024,3275.0,988.0,3
+182,Example Seattle Property,999 Hiawatha,1 Bed 1.5 Bath,10/26/2024,2550.0,981.0,1
+183,Example Seattle Property,BEAM,2 Bed 2 Bath,10/26/2024,2533.0,933.67,3
+184,Example Seattle Property,Chroma,1 Bed 1 Bath,10/26/2024,2605.75,570.5,4
+185,Example Seattle Property,CityLine,2 Bed 2.5 Bath,10/26/2024,3677.0,1432.0,1
+186,Example Seattle Property,U Place Apartments,1 Bed 1 Bath,10/26/2024,2607.0,631.5,2
+187,Example Washington Property,AdMo Heights,0 Bed 1 Bath,10/26/2024,2393.33,467.83,6
+188,Example Washington Property,AdMo Heights,1 Bed 1 Bath,10/26/2024,2728.33,500.0,3
+189,Example Washington Property,Arcade Sunshine,0 Bed 1 Bath,10/26/2024,2267.0,659.0,2
+190,Example Washington Property,Arcade Sunshine,1 Bed 1 Bath,10/26/2024,2484.43,763.86,7
+191,Example Washington Property,Arcade Sunshine,2 Bed 2 Bath,10/26/2024,3162.0,885.5,2
+192,Example Washington Property,Ledger Union Market,1 Bed 1 Bath,10/26/2024,2720.0,622.0,5
+193,Example Washington Property,Ledger Union Market,2 Bed 2 Bath,10/26/2024,3425.0,845.0,2
+194,Example Washington Property,The Florian,1 Bed 1 Bath,10/26/2024,2245.0,601.0,3
+195,Example Washington Property,The MO,1 Bed 1 Bath,10/26/2024,2621.1,708.8,10
+196,Example Washington Property,The MO,2 Bed 2 Bath,10/26/2024,3232.75,1053.75,4
+0,Example Austin Property,Bell Southpark,2 Bed 2 Bath,10/27/2024,1621.67,996.33,3
+1,Example Austin Property,Bell Southpark,3 Bed 2 Bath,10/27/2024,2000.0,1344.33,3
+2,Example Austin Property,Fivetwo at Highland,0 Bed 1 Bath,10/27/2024,1483.0,548.0,1
+3,Example Austin Property,Fivetwo at Highland,1 Bed 1 Bath,10/27/2024,1865.07,864.27,15
+4,Example Austin Property,Fivetwo at Highland,2 Bed 2 Bath,10/27/2024,2504.38,1173.25,8
+5,Example Austin Property,The Clark,1 Bed 1 Bath,10/27/2024,2533.0,780.5,2
+6,Example Austin Property,The Clark,2 Bed 2 Bath,10/27/2024,2979.0,1076.0,1
+7,Example Austin Property,The Shiloh,0 Bed 1 Bath,10/27/2024,1563.67,684.0,3
+8,Example Austin Property,The Shiloh,1 Bed 1 Bath,10/27/2024,1878.89,851.67,9
+9,Example Austin Property,The Shiloh,2 Bed 1 Bath,10/27/2024,2215.0,1131.33,3
+10,Example Austin Property,The Shiloh,2 Bed 2 Bath,10/27/2024,2261.33,1084.0,3
+11,Example Austin Property,The Upland,1 Bed 1 Bath,10/27/2024,1635.0,841.0,3
+12,Example Boston Property,345 Harrison,0 Bed 1 Bath,10/27/2024,3189.0,471.08,12
+13,Example Boston Property,345 Harrison,1 Bed 1 Bath,10/27/2024,3425.0,571.0,1
+14,Example Boston Property,Harbor Point,1 Bed 1 Bath,10/27/2024,2558.0,674.0,5
+15,Example Boston Property,Harbor Point,2 Bed 1 Bath,10/27/2024,3400.0,873.0,1
+16,Example Boston Property,Parkway Apartments,1 Bed 1 Bath,10/27/2024,2477.86,753.0,7
+17,Example Boston Property,South Standard,0 Bed 1 Bath,10/27/2024,2711.67,471.0,3
+18,Example Boston Property,The Brynx,0 Bed 1 Bath,10/27/2024,2845.0,572.5,2
+19,Example Charlotte Property,Cortland South End,2 Bed 2 Bath,10/27/2024,2701.7,1235.7,10
+20,Example Charlotte Property,MAA LoSo,3 Bed 2 Bath,10/27/2024,3041.33,1439.67,3
+21,Example Charlotte Property,Mallard Glen and Adams Place,2 Bed 2 Bath,10/27/2024,1532.67,1242.0,3
+22,Example Charlotte Property,Mallard Glen and Adams Place,3 Bed 2 Bath,10/27/2024,1756.0,1410.0,3
+23,Example Charlotte Property,Mallard Glen and Adams Place,3 Bed 3 Bath,10/27/2024,1905.88,1324.0,8
+24,Example Charlotte Property,NOVEL Mallard Creek by Crescent Communities,2 Bed 2 Bath,10/27/2024,2593.75,1178.75,4
+25,Example Charlotte Property,The Sloan at LoSo,2 Bed 2 Bath,10/27/2024,3089.0,1326.1,10
+26,Example Charlotte Property,The Sloan at LoSo,2 Bed 2.5 Bath,10/27/2024,2735.33,1163.0,3
+27,Example Charlotte Property,The Sloan at LoSo,3 Bed 3 Bath,10/27/2024,3843.0,1682.0,1
+28,Example Chicago Property,Elevate,1 Bed 1 Bath,10/27/2024,3315.0,650.0,1
+29,Example Chicago Property,Elevate,2 Bed 2 Bath,10/27/2024,4120.0,1082.0,1
+30,Example Chicago Property,Presidential Towers,0 Bed 1 Bath,10/27/2024,1598.33,505.0,3
+31,Example Chicago Property,Sentral Michigan Avenue,0 Bed 1 Bath,10/27/2024,2269.0,528.0,5
+32,Example Chicago Property,The 808 Cleveland,2 Bed 2 Bath,10/27/2024,3837.0,1108.0,2
+33,Example Chicago Property,The Residences at NewCity,1 Bed 1 Bath,10/27/2024,3461.75,867.5,4
+34,Example Columbus Property,Building B at Gravity,2 Bed 2 Bath,10/27/2024,3548.75,1425.5,4
+35,Example Columbus Property,Library Park,2 Bed 2 Bath,10/27/2024,2865.5,1188.0,2
+36,Example Columbus Property,ONE AT THE PENINSULA,1 Bed 1 Bath,10/27/2024,3427.67,746.0,3
+37,Example Columbus Property,ONE AT THE PENINSULA,2 Bed 2 Bath,10/27/2024,2795.5,1069.67,6
+38,Example Columbus Property,The Sage at Jeffrey Park,2 Bed 2 Bath,10/27/2024,2279.0,980.0,4
+39,Example Columbus Property,The Thomas at GVX,2 Bed 2 Bath,10/27/2024,2984.67,1125.33,3
+40,Example Columbus Property,The Thomas at GVX,3 Bed 2 Bath,10/27/2024,2807.0,1308.0,1
+41,Example Dallas Property,1400HiLine,1 Bed 1.5 Bath,10/27/2024,2765.0,1100.0,1
+42,Example Dallas Property,1400HiLine,2 Bed 2 Bath,10/27/2024,3758.0,1312.0,2
+43,Example Dallas Property,1400HiLine,2 Bed 2.5 Bath,10/27/2024,3703.6,1380.8,5
+44,Example Dallas Property,Bandera at Preston Hollow,1 Bed 1.5 Bath,10/27/2024,3662.0,1732.0,1
+45,Example Dallas Property,Bandera at Preston Hollow,2 Bed 2 Bath,10/27/2024,3046.0,1396.0,1
+46,Example Dallas Property,Gables Villa Rosa,1 Bed 1 Bath,10/27/2024,2044.67,756.0,3
+47,Example Dallas Property,The National Residences,1 Bed 1 Bath,10/27/2024,3259.17,966.72,18
+48,Example Dallas Property,The National Residences,2 Bed 2 Bath,10/27/2024,3745.0,1242.0,1
+49,Example Dallas Property,The Statler Residences,1 Bed 1.5 Bath,10/27/2024,2096.67,902.0,3
+50,Example Denver Property,Airie Apartments,2 Bed 2 Bath,10/27/2024,2553.11,1158.33,9
+51,Example Denver Property,Airie Apartments,3 Bed 2 Bath,10/27/2024,3516.0,1520.0,1
+52,Example Denver Property,Alloy Sunnyside,1 Bed 1 Bath,10/27/2024,2567.75,728.0,4
+53,Example Denver Property,Alloy Sunnyside,2 Bed 2 Bath,10/27/2024,2844.21,1012.5,14
+54,Example Denver Property,Avalon Governors Park,1 Bed 1 Bath,10/27/2024,2621.67,853.0,3
+55,Example Denver Property,Green Leaf Jayne,1 Bed 1 Bath,10/27/2024,1926.33,844.67,3
+56,Example Denver Property,MAA Milepost 35,2 Bed 2 Bath,10/27/2024,2486.33,1091.0,3
+57,Example El Paso Property,Desert Commons East,3 Bed 2 Bath,10/27/2024,2050.0,1378.0,2
+58,Example El Paso Property,Lifestyles at Hueco Valley,3 Bed 2 Bath,10/27/2024,1652.0,1433.33,3
+59,Example El Paso Property,Lifestyles at Pellicano,2 Bed 1 Bath,10/27/2024,1515.0,876.0,1
+60,Example El Paso Property,Lifestyles at Pellicano,2 Bed 2 Bath,10/27/2024,1580.5,1058.75,4
+61,Example El Paso Property,Lifestyles at Pellicano,3 Bed 2 Bath,10/27/2024,1648.0,1214.67,3
+62,Example El Paso Property,Luxx Verge Villas,3 Bed 2.5 Bath,10/27/2024,3175.0,1871.0,1
+63,Example El Paso Property,Luxx Verge Villas,3 Bed 3 Bath,10/27/2024,2100.0,1829.5,2
+64,Example El Paso Property,Retreat at Mesa Hills,2 Bed 2.5 Bath,10/27/2024,1920.0,1556.0,1
+65,Example El Paso Property,Retreat at Mesa Hills,3 Bed 2 Bath,10/27/2024,2170.0,2127.0,1
+66,Example Fort Worth Property,Alta Marine Creek,3 Bed 3 Bath,10/27/2024,2642.0,1520.0,1
+67,Example Fort Worth Property,Deco,1 Bed 1 Bath,10/27/2024,2367.4,746.4,5
+68,Example Fort Worth Property,Madera at Leftbank,3 Bed 3 Bath,10/27/2024,3759.0,2792.0,2
+69,Example Fort Worth Property,The Dawson at Berkshire,1 Bed 1 Bath,10/27/2024,1309.0,716.0,3
+70,Example Fort Worth Property,The Palo Apartments,3 Bed 2 Bath,10/27/2024,2725.0,1451.0,1
+71,Example Houston Property,Domain Heights,1 Bed 1 Bath,10/27/2024,1810.33,717.0,3
+72,Example Houston Property,Domain Heights,2 Bed 2 Bath,10/27/2024,2442.0,1185.5,6
+73,Example Houston Property,Grand Villas Apartments,2 Bed 2 Bath,10/27/2024,1913.0,1149.0,3
+74,Example Houston Property,Hayworth,1 Bed 2 Bath,10/27/2024,2688.0,1542.0,1
+75,Example Houston Property,Hayworth,2 Bed 2 Bath,10/27/2024,3003.83,1438.08,12
+76,Example Houston Property,Hayworth,2 Bed 2.5 Bath,10/27/2024,3494.43,1821.14,7
+77,Example Houston Property,Lumen,2 Bed 2 Bath,10/27/2024,2747.67,1213.0,3
+78,Example Houston Property,Providence Uptown,3 Bed 2 Bath,10/27/2024,2073.0,1396.0,1
+79,Example Indianapolis Property,9 on Canal,3 Bed 3 Bath,10/27/2024,3100.0,1244.0,3
+80,Example Indianapolis Property,Ardmore Apartments,2 Bed 2.5 Bath,10/27/2024,2792.5,1401.5,2
+81,Example Indianapolis Property,Industry Indianapolis,2 Bed 2 Bath,10/27/2024,3356.54,1182.08,13
+82,Example Indianapolis Property,Parkside at Castleton Square Apartments an...,2 Bed 2 Bath,10/27/2024,1500.0,974.0,1
+83,Example Indianapolis Property,Parkside at Castleton Square Apartments an...,3 Bed 2.5 Bath,10/27/2024,1830.0,1345.0,1
+84,Example Indianapolis Property,The Boardwalk at Westlake Apartments and T...,2 Bed 1.5 Bath,10/27/2024,1718.33,1067.0,3
+85,Example Indianapolis Property,The Boardwalk at Westlake Apartments and T...,3 Bed 1.5 Bath,10/27/2024,1865.0,1200.0,1
+86,Example Jacksonville Property,Bainbridge Avenues Walk,2 Bed 2 Bath,10/27/2024,1880.67,1201.0,3
+87,Example Jacksonville Property,Pinnacle,3 Bed 2.5 Bath,10/27/2024,2874.0,1584.0,3
+88,Example Jacksonville Property,Presidium Park,3 Bed 3 Bath,10/27/2024,2724.0,1560.0,1
+89,Example Jacksonville Property,Presidium Regal,3 Bed 3 Bath,10/27/2024,2895.0,1560.0,3
+90,Example Jacksonville Property,Terraces at Town Center,1 Bed 1 Bath,10/27/2024,1370.0,898.0,1
+91,Example Jacksonville Property,Terraces at Town Center,2 Bed 2 Bath,10/27/2024,1837.67,1203.0,3
+92,Example Las Vegas Property,FireSkye,3 Bed 2 Bath,10/27/2024,2158.0,1262.0,1
+93,Example Las Vegas Property,Keller Cactus Hills,2 Bed 2 Bath,10/27/2024,2208.75,1118.0,4
+94,Example Las Vegas Property,Royal Palms,3 Bed 2 Bath,10/27/2024,1752.5,1178.0,2
+95,Example Las Vegas Property,The Michael B Townhomes and Flats,2 Bed 1 Bath,10/27/2024,1720.0,962.0,1
+96,Example Las Vegas Property,The Michael B Townhomes and Flats,2 Bed 2 Bath,10/27/2024,1976.67,1004.0,3
+97,Example Las Vegas Property,The Michael B Townhomes and Flats,2 Bed 2.5 Bath,10/27/2024,2025.0,1152.0,3
+98,Example Las Vegas Property,Tuscan Highlands,1 Bed 1 Bath,10/27/2024,1699.75,760.0,4
+99,Example Los Angeles Property,115 North Wetherly Drive,2 Bed 2 Bath,10/27/2024,3198.0,1100.0,1
+100,Example Los Angeles Property,AVA Toluca Hills,2 Bed 2 Bath,10/27/2024,3233.75,1012.0,4
+101,Example Los Angeles Property,Nari Koreatown,1 Bed 1 Bath,10/27/2024,2571.67,649.0,3
+102,Example Los Angeles Property,THEA at Metropolis,0 Bed 1 Bath,10/27/2024,3049.75,579.5,4
+103,Example Los Angeles Property,THEA at Metropolis,1 Bed 1 Bath,10/27/2024,3304.67,837.0,3
+104,Example Los Angeles Property,sageLA - Brand New,0 Bed 1 Bath,10/27/2024,2521.5,555.25,4
+105,Example Nashville Property,445 Park Commons,2 Bed 2 Bath,10/27/2024,2599.0,1190.0,3
+106,Example Nashville Property,Flats at Laurel and Pine Apartments,3 Bed 2 Bath,10/27/2024,3200.0,2394.0,1
+107,Example Nashville Property,Livano Nations,2 Bed 2 Bath,10/27/2024,2412.0,1154.6,5
+108,Example Nashville Property,Livano Nations,3 Bed 2 Bath,10/27/2024,2901.0,1459.4,5
+109,Example Nashville Property,PRIME,0 Bed 1 Bath,10/27/2024,2525.0,612.0,2
+110,Example Nashville Property,PRIME,1 Bed 1 Bath,10/27/2024,2441.67,775.0,3
+111,Example Nashville Property,The Scottie,2 Bed 2 Bath,10/27/2024,2625.0,1036.0,3
+112,Example New York City Property,1515 Surf,1 Bed 1 Bath,10/27/2024,3161.67,614.0,18
+113,Example New York City Property,1515 Surf,2 Bed 1 Bath,10/27/2024,3323.12,665.5,8
+114,Example New York City Property,Renaissance Hills,2 Bed 1 Bath,10/27/2024,3304.0,857.5,6
+115,Example New York City Property,Renaissance Hills,2 Bed 1.5 Bath,10/27/2024,3199.0,950.0,1
+116,Example New York City Property,Renaissance Hills,3 Bed 2 Bath,10/27/2024,3817.0,1020.0,3
+117,Example New York City Property,Rosemont Brookhaven,2 Bed 2 Bath,10/27/2024,3221.86,1160.14,7
+118,Example New York City Property,Rosemont Brookhaven,2 Bed 2.5 Bath,10/27/2024,3233.0,1135.0,1
+119,Example New York City Property,Rosemont Brookhaven,3 Bed 2 Bath,10/27/2024,3531.0,1269.5,6
+120,Example New York City Property,The Arboretum,2 Bed 2 Bath,10/27/2024,3495.0,1414.0,3
+121,Example New York City Property,Woodcrest,1 Bed 1 Bath,10/27/2024,3500.0,813.0,1
+122,Example New York City Property,Woodcrest,2 Bed 2 Bath,10/27/2024,3997.5,1031.0,2
+123,Example Oklahoma City Property,Broadvue Apartments,3 Bed 2 Bath,10/27/2024,2460.0,1382.0,1
+124,Example Oklahoma City Property,Deep Deuce at Bricktown Apartments,1 Bed 1 Bath,10/27/2024,1675.0,708.0,1
+125,Example Oklahoma City Property,Deep Deuce at Bricktown Apartments,2 Bed 1 Bath,10/27/2024,1813.0,1012.0,1
+126,Example Oklahoma City Property,Deep Deuce at Bricktown Apartments,2 Bed 2 Bath,10/27/2024,1539.0,1144.0,1
+127,Example Oklahoma City Property,Deep Deuce at Bricktown Apartments,3 Bed 2 Bath,10/27/2024,2642.5,1276.0,2
+128,Example Oklahoma City Property,Magnolia Row,3 Bed 3 Bath,10/27/2024,2500.0,1440.0,1
+129,Example Oklahoma City Property,Metropolitan,2 Bed 2 Bath,10/27/2024,2735.0,1424.0,1
+130,Example Oklahoma City Property,Metropolitan,3 Bed 2 Bath,10/27/2024,2476.0,1449.0,1
+131,Example Oklahoma City Property,Metropolitan,3 Bed 3 Bath,10/27/2024,2745.0,1558.0,3
+132,Example Oklahoma City Property,The First Residences at First National,1 Bed 1 Bath,10/27/2024,2695.75,921.0,4
+133,Example Philadelphia Property,1500 Locust,1 Bed 1 Bath,10/27/2024,2270.83,860.0,6
+134,Example Philadelphia Property,322 on North Broad,3 Bed 2 Bath,10/27/2024,3750.67,1414.0,3
+135,Example Philadelphia Property,Arrive University City,0 Bed 1 Bath,10/27/2024,2206.67,582.0,3
+136,Example Philadelphia Property,Arrive University City,1 Bed 1 Bath,10/27/2024,2417.14,694.71,7
+137,Example Philadelphia Property,Arrive University City,2 Bed 2 Bath,10/27/2024,3950.0,1175.0,1
+138,Example Philadelphia Property,Corner 2nd,1 Bed 1 Bath,10/27/2024,3095.0,799.0,1
+139,Example Philadelphia Property,Corner 2nd,2 Bed 2 Bath,10/27/2024,3670.0,1290.0,1
+140,Example Philadelphia Property,Dwell 2nd Street,2 Bed 2 Bath,10/27/2024,2863.33,1139.67,3
+141,Example Phoenix Property,AVE Paradise Valley,1 Bed 1 Bath,10/27/2024,3027.67,864.0,3
+142,Example Phoenix Property,Bloom at Deer Valley,3 Bed 2 Bath,10/27/2024,2955.0,1303.0,1
+143,Example Phoenix Property,Broadstone Uptown,2 Bed 2 Bath,10/27/2024,3051.0,1023.0,1
+144,Example Phoenix Property,Broadstone Uptown,3 Bed 2 Bath,10/27/2024,3208.0,1647.0,1
+145,Example Phoenix Property,Broadstone Uptown,3 Bed 3 Bath,10/27/2024,3739.5,1648.0,2
+146,Example Phoenix Property,Montreux Luxury Apartments,1 Bed 1 Bath,10/27/2024,3069.0,888.0,1
+147,Example Phoenix Property,Montreux Luxury Apartments,3 Bed 2 Bath,10/27/2024,3277.67,1517.0,3
+148,Example Phoenix Property,Roosevelt Point,3 Bed 3 Bath,10/27/2024,2946.0,1050.0,3
+149,Example San Antonio Property,7600 Broadway,1 Bed 1 Bath,10/27/2024,3064.0,1084.0,1
+150,Example San Antonio Property,7600 Broadway,1 Bed 1.5 Bath,10/27/2024,3136.0,1095.0,1
+151,Example San Antonio Property,7600 Broadway,2 Bed 2 Bath,10/27/2024,3468.33,1455.67,3
+152,Example San Antonio Property,7600 Broadway,2 Bed 2.5 Bath,10/27/2024,3807.0,1461.0,1
+153,Example San Antonio Property,Celeste at La Cantera,2 Bed 2 Bath,10/27/2024,2888.0,1524.0,1
+154,Example San Antonio Property,Cypress at Stone Oak,2 Bed 2 Bath,10/27/2024,3049.0,1783.0,1
+155,Example San Antonio Property,Cypress at Stone Oak,3 Bed 2 Bath,10/27/2024,2899.0,2494.0,1
+156,Example San Antonio Property,Cypress at Stone Oak,4 Bed 3 Bath,10/27/2024,2799.0,2322.0,1
+157,Example San Antonio Property,Cypress at Stone Oak,5 Bed 4 Bath,10/27/2024,4099.0,3274.0,1
+158,Example San Antonio Property,Marquis on Evans,2 Bed 2 Bath,10/27/2024,1711.0,1183.0,1
+159,Example San Antonio Property,Marquis on Evans,3 Bed 2 Bath,10/27/2024,1953.0,1318.0,1
+160,Example San Antonio Property,The Josephine,2 Bed 2 Bath,10/27/2024,3250.0,1232.8,5
+161,Example San Antonio Property,The Josephine,3 Bed 2 Bath,10/27/2024,3915.0,1451.2,5
+162,Example San Diego Property,Diega,0 Bed 1 Bath,10/27/2024,3002.4,594.4,5
+163,Example San Diego Property,Diega,1 Bed 1 Bath,10/27/2024,3297.5,697.25,4
+164,Example San Diego Property,Gema,1 Bed 1 Bath,10/27/2024,2800.0,842.0,2
+165,Example San Diego Property,Gema,2 Bed 2 Bath,10/27/2024,3550.0,1160.0,3
+166,Example San Diego Property,Gema,2 Bed 2.5 Bath,10/27/2024,3161.33,1160.0,3
+167,Example San Diego Property,Mason,2 Bed 2.5 Bath,10/27/2024,3299.0,1168.0,3
+168,Example San Diego Property,Mira Bella Apartments,1 Bed 1 Bath,10/27/2024,2964.0,780.0,1
+169,Example San Diego Property,Mira Bella Apartments,2 Bed 2 Bath,10/27/2024,3260.67,1059.0,3
+170,Example San Diego Property,Town Park Villas Senior Apartments 55+,2 Bed 2 Bath,10/27/2024,3647.67,1092.67,3
+171,Example San Francisco Property,2000 Post,0 Bed 1 Bath,10/27/2024,2740.8,518.4,5
+172,Example San Francisco Property,2000 Post,1 Bed 1 Bath,10/27/2024,2962.2,625.0,5
+173,Example San Francisco Property,Edgewater,1 Bed 1 Bath,10/27/2024,3119.67,635.0,3
+174,Example San Francisco Property,Edgewater,1 Bed 1.5 Bath,10/27/2024,3347.5,750.0,2
+175,Example San Francisco Property,HQ,2 Bed 1 Bath,10/27/2024,3056.0,860.0,1
+176,Example San Francisco Property,HQ,2 Bed 2 Bath,10/27/2024,3426.0,775.0,2
+177,Example San Francisco Property,Hanover Soma West,0 Bed 1 Bath,10/27/2024,2508.0,484.0,1
+178,Example San Francisco Property,Hanover Soma West,1 Bed 1 Bath,10/27/2024,3135.8,849.8,5
+179,Example San Francisco Property,Hanover Soma West,2 Bed 1 Bath,10/27/2024,3312.5,865.5,2
+180,Example San Francisco Property,Hanover Soma West,2 Bed 2 Bath,10/27/2024,3557.62,953.62,8
+181,Example San Francisco Property,Lakewood Apartments At Lake Merced,1 Bed 1 Bath,10/27/2024,2799.0,604.0,3
+182,Example San Jose Property,DUO Apartments,0 Bed 1 Bath,10/27/2024,2612.5,561.0,2
+183,Example San Jose Property,DUO Apartments,1 Bed 1 Bath,10/27/2024,2671.67,782.33,3
+184,Example San Jose Property,DUO Apartments,2 Bed 2 Bath,10/27/2024,3361.25,1114.25,4
+185,Example San Jose Property,Hanover Winchester,1 Bed 1 Bath,10/27/2024,3446.67,768.0,12
+186,Example San Jose Property,Miro,0 Bed 1 Bath,10/27/2024,3132.33,623.67,3
+187,Example San Jose Property,The Fay,0 Bed 1 Bath,10/27/2024,1849.33,366.0,3
+188,Example San Jose Property,eaves West Valley,1 Bed 1 Bath,10/27/2024,2818.33,732.0,3
+189,Example San Jose Property,eaves West Valley,2 Bed 2 Bath,10/27/2024,3275.0,988.0,3
+190,Example Seattle Property,999 Hiawatha,1 Bed 1.5 Bath,10/27/2024,2550.0,981.0,1
+191,Example Seattle Property,Chroma,1 Bed 1 Bath,10/27/2024,2605.75,570.5,4
+192,Example Seattle Property,CityLine,2 Bed 2.5 Bath,10/27/2024,3677.0,1432.0,1
+193,Example Seattle Property,The Kennedy Building,2 Bed 2 Bath,10/27/2024,2543.0,1003.0,1
+194,Example Seattle Property,U Place Apartments,1 Bed 1 Bath,10/27/2024,2607.0,631.5,2
+195,Example Washington Property,AdMo Heights,0 Bed 1 Bath,10/27/2024,2393.33,467.83,6
+196,Example Washington Property,AdMo Heights,1 Bed 1 Bath,10/27/2024,2733.33,500.0,3
+197,Example Washington Property,Arcade Sunshine,0 Bed 1 Bath,10/27/2024,2267.0,659.0,2
+198,Example Washington Property,Arcade Sunshine,1 Bed 1 Bath,10/27/2024,2484.43,763.86,7
+199,Example Washington Property,Arcade Sunshine,2 Bed 2 Bath,10/27/2024,3162.0,885.5,2
+200,Example Washington Property,Ledger Union Market,1 Bed 1 Bath,10/27/2024,2720.0,622.0,5
+201,Example Washington Property,Ledger Union Market,2 Bed 2 Bath,10/27/2024,3425.0,845.0,2
+202,Example Washington Property,The Florian,1 Bed 1 Bath,10/27/2024,2245.0,601.0,3
+203,Example Washington Property,The MO,1 Bed 1 Bath,10/27/2024,2621.1,708.8,10
+204,Example Washington Property,The MO,2 Bed 2 Bath,10/27/2024,3232.0,1039.67,3
