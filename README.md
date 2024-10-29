@@ -118,6 +118,9 @@ This dashboard gives you a high-level overview of competitor properties.
 2. Open `Dashboards/Market Survey Template.pbit` in PowerBI desktop.
 3. Connect the dashboard to your `Output.csv` file.
 
+#### Example Usage
+![image info](./Dashboards/MarketSurveyDashExample.png)
+
 ### 2. Market Comparison (With Internal Data, Rolled Up)
 Compare your property’s performance with the scraped competitor data.
 
@@ -127,7 +130,7 @@ Compare your property’s performance with the scraped competitor data.
 3. Connect the dashboard to both `Output.csv` and `Portfolio_Performance.csv`.
 
 ## Future Improvements
-- More prebuilt PowerBI Dashboard Templates, and Image examples
-    - BI Equivalents for data that hasn't been rolled up
+- More prebuilt PowerBI Dashboard Templates, and more Image examples
+    - BI Equivalents for individual unit lists (rollup = False)
 - Fixed Input Option for webscraping (provide a set list of links to peruse and return their values without dynamically fetching properties)
 - Further Updates to Large Example Input and Output datasets, and screenshots of their usage in Dashboards
