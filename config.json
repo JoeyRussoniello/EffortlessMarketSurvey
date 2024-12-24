@@ -2,10 +2,10 @@
     "platform": "win64",    
     "headless": true,    
     "verbose": true,        
-    "ncomps": 7,      
+    "ncomps": 10,      
     "input_path": "Input.csv",  
     "rollup": false,           
-    "output_path": "Examples\\BostonOutput.csv", 
+    "output_path": "Examples\\Tucson.csv", 
     "output_mode": "overwrite",  
-    "parallel_members": 3
+    "parallel_members": 1
 }

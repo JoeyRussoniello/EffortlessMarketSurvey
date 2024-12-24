@@ -1,5 +1,6 @@
-#To delete all instances of chromedriver for cleaning is: taskkill /F /IM chromedriver.exe /T
+# To delete all instances of chromedriver for cleaning is: taskkill /F /IM chromedriver.exe /T
 #Standard Imports
+import logging
 from datetime import datetime
 import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -15,10 +16,22 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.common.exceptions import TimeoutException,ElementNotInteractableException
+#Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('app.log', mode='a'),
+        logging.StreamHandler()
+    ]
+)
+# Define a constant for the date format
+DATE_FORMAT = "%m/%d/%Y"
 # Get today's date
 today = datetime.today()
-# Format the date as YYYY MM DD
-formatted_date = today.strftime("%m/%d/%Y")
+# Format the date using the constant
+formatted_date = today.strftime(DATE_FORMAT)
+
 
 def not_containing(l, filterchar):
     """Return the list filtered to not contain character filterchar
@@ -32,11 +45,18 @@ def not_containing(l, filterchar):
     """
     return list(filter(lambda text: text != filterchar,l))
 def unique(seq):
+    """Get the unique values from a list <seq>
+
+    Args:
+        seq (list)
+    Returns:
+        list: unique values in seq
+    """
     #Helper that gets all unique values without modifying order. Used with getLinks
     seen = set()
-    seen_add = seen.add
-    return [x for x in seq if not (x in seen or seen_add(x))]
+    return [x for x in seq if not (x in seen or seen.add(x))]
 def dollar_to_int(dollar_str):
+    """Clean dollar strings on apartment listings, replacing with numbers"""
     # Remove the dollar sign, extraneous characters and commas
     clean_str = dollar_str.replace('$', '').replace(',', '').replace("/Person",'')
     # Convert the cleaned string to an integer
@@ -46,6 +66,10 @@ def dollar_to_int(dollar_str):
         return None
 
 class MarketSurvey():
+    """
+    Market Survey class used to search available listings
+    on apartments.com in a given area
+    """
     def __init__(self,headless = True,verbose = False,ncomps=5):
         service =  Service(executable_path=r".\chromedriver.exe")
         if not headless:
@@ -65,25 +89,36 @@ class MarketSurvey():
         self.df = None
     def findArea(self,area):
         """Searches an <area> on apartments.com given an active WebDriver"""
-        print(f"Beginning survey for {area}...")
+        logging.info(f"Beginning survey for {area}...")
         #Open base apartments.com
         self.driver.get("https://www.apartments.com/")
         #Wait until page loads
-        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.ID, "quickSearchLookup")))
+        WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.ID, "quickSearchLookup"))
+        )
         #Enter words into search area
         area_input = self.driver.find_element(By.ID,"quickSearchLookup")
         area_input.send_keys(area)
         
         time.sleep(2)
         #Click button to submit requiest
-        button = self.driver.find_element(By.CSS_SELECTOR, "button[title='Search apartments for rent']")
+        button = self.driver.find_element(
+            By.CSS_SELECTOR, "button[title='Search apartments for rent']"
+        )
         button.click()
         #Wait unitl new page is opened
         try:
             WebDriverWait(self.driver,20).until(EC.presence_of_element_located((By.CSS_SELECTOR, "a.property-link")))
         except TimeoutException:
-            print("Finding this area took too long (>20 seconds)")
+            logging.warning("Finding this area took too long (>20 seconds)")
     def filterArea(self,min_price = None,max_price = None):
+        """Filter the active Area search page to look for apartments
+        between <min_price> and <max_price>
+
+        Args:
+            min_price (number, optional): Minimum apt price. Defaults to None.
+            max_price (number, optional): Maximum apt price. Defaults to None.
+        """
         filter_button = self.driver.find_element(By.ID, "rentRangeLink")
         filter_button.click()
         time.sleep(0.5)
@@ -98,7 +133,7 @@ class MarketSurvey():
         button.click()
         time.sleep(0.5)
     def getAreaLinks(self):
-    #Get all competitive properties in the area, given the driver is open on the area
+        """Get all competitive properties in the area, given the driver is open on the area"""
         links = self.driver.find_elements(By.CSS_SELECTOR, "a.property-link")
         hrefs = [link.get_attribute("href") for link in links]
         self.current_links = hrefs 
@@ -115,7 +150,9 @@ class MarketSurvey():
         # Security Deposit - Remove extraneous text and attempt convert to float
         deposit = no_index["Security Deposit"]
         numified_sd = pd.to_numeric(
-            deposit.apply(lambda x: x.partition(" deposit")[0][1:].replace(",", "") if type(x) == str else x),
+            deposit.apply(
+                lambda x:x.partition(" deposit")[0][1:].replace(",", "") if isinstance(x,str) else x
+            ),
             errors='coerce'
         )
         no_index["Security Deposit"] = numified_sd
@@ -124,7 +161,7 @@ class MarketSurvey():
         rents = no_index["Pricing"]
         new_rents = []
         for rent in rents:
-            if type(rent) == str:
+            if isinstance(rent,str):
                 new_str = rent.replace(",","").replace("$","").replace("/Person","").replace("–", "-").strip()
                 if "-" in rent:
                     min, max = rent.split('-')
@@ -201,7 +238,7 @@ class MarketSurvey():
                     "Baths": item.get_attribute("data-baths"),
                     "Model": data_model,
                     "Security Deposit": modeldict[data_model],
-                    "Report Date":formatted_date,
+                    "Report Date": datetime.today().strftime(DATE_FORMAT),
                     "Type":"Grid"
                 }
                 for col in cols:
@@ -265,27 +302,33 @@ class MarketSurvey():
         properties = []
         #Iterate over all links
         #Wait until page loads
+        
         try:
             WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, "div.pricingGridItem.multiFamily")))
         except TimeoutException:
-            return
-        
+            return      
         #Find details
         prop = self.driver.find_element(By.CSS_SELECTOR,"h1.propertyName").text
 
         with_unit_key = self.driver.find_elements(By.CSS_SELECTOR,"div.pricingGridItem.multiFamily.hasUnitGrid")
         without_unit_key = self.driver.find_elements(By.CSS_SELECTOR,"div.pricingGridItem.multiFamily")
 
-        if self.verbose == True:
-            print(f"Gathering data for {prop}...")
+        if self.verbose:
+            logging.info(f"Gathering data for {prop}...")
         
         if len(with_unit_key) > 0:
             properties = self.findIndividualUnits(property,prop)
         elif len(without_unit_key) > 0:
-            if self.verbose == True:
-                print("Found gridless item")
+            if self.verbose:
+                logging.info("Found gridless item")
             properties = self.findUnitTypes(property,prop,without_unit_key)
         
+        address_elem = self.driver.find_element(By.CSS_SELECTOR,'div.propertyAddressContainer')
+        address = address_elem.text.partition('\n')[0]
+        link = self.driver.current_url
+        for model in properties:
+            model['Address'] = address
+            model['URL'] = link
         return properties
     def getAreaData(self, area, property,min_price = None,max_price = None):
         #Search for the area on apartments.com
@@ -300,7 +343,7 @@ class MarketSurvey():
         #Make sure link list is unique
         hrefs = unique(self.current_links)
         if self.verbose == True:
-            print(f"Found links: {hrefs}...")
+            logging.info(f"Found links: {hrefs}...")
 
         numfound = 0
         #Get as many links as possible with data, up to ncomps
@@ -363,7 +406,7 @@ class MarketSurvey():
         for index,row in input_df.iterrows():
             self.getAreaData(row["Area"],row["Property Name"],row["Min Price"],row["Max Price"])
             if self.verbose == True:
-                print(f"Market Survey complete for {row['Area']}. Survey {np.round((index + 1)/total_props,4) * 100}% complete")
+                logging.info(f"Market Survey complete for {row['Area']}. Survey {np.round((index + 1)/total_props,4) * 100}% complete")
         #Update dataframe with self-contained data
         self.df = pd.DataFrame(self.data)
         #Close webdriver
@@ -400,7 +443,7 @@ class MarketSurvey():
             raise ValueError("Mode must be 'overwrite' or 'append'")
         #Reset index applied to ensure pivot columns included in output
         self.df.reset_index().to_csv(file_path, mode=write_mode, header=header, index=False)
-        print(f"Data saved to {file_path}")
+        logging.info(f"Data saved to {file_path}")
     def to_excel(self, mode, file_path,sheetname):
         if mode not in ['overwrite', 'append']:
             raise ValueError("Mode must be 'overwrite' or 'append'")
@@ -413,7 +456,7 @@ class MarketSurvey():
             with pd.ExcelWriter(file_path, engine='openpyxl', mode='a', if_sheet_exists='overlay') as writer:
                 # Append the new DataFrame to the existing sheet
                 self.df.to_excel(writer, sheet_name=sheetname,index=True, startrow=writer.sheets[sheetname].max_row,header = False)
-        print(f"Data saved to {file_path}")
+        logging.info(f"Data saved to {file_path}")
 
 class MarketSurveyParallel(MarketSurvey):
     @staticmethod
@@ -445,7 +488,7 @@ class MarketSurveyParallel(MarketSurvey):
                     data = future.result()
                     all_data.extend(data)  # Collect data from each future
                 except Exception as e:
-                    print(f"Error encountered: {e}")
+                    logging.errror(f"Error encountered: {e}")
 
         # Combine all collected data into the main DataFrame
         self.df = pd.DataFrame(all_data)
@@ -453,5 +496,7 @@ class MarketSurveyParallel(MarketSurvey):
         if rollup:
             self.rollup_df()
 
-    #def write_output(self, mode, file_path):
-        #super().write_output(mode, file_path)
+    def to_csv(self, mode, file_path):
+        super().to_csv(mode, file_path)
+    def to_excel(self,mode,file_path,sheetname):
+        super().to_excel(mode,file_path,sheetname)
