@@ -65,6 +65,22 @@ def dollar_to_int(dollar_str):
     except ValueError:
         return None
 
+def find_button_by_data_value(button_group, data_value):
+    """Find the button with the specified data-value in the button group.
+
+    Args:
+        button_group (WebElement): The button group container element.
+        data_value (str): The data-value to search for.
+
+    Returns:
+        WebElement: The button with the specified data-value, or None if not found.
+    """
+    buttons = button_group.find_elements(By.CSS_SELECTOR, 'button')
+    for button in buttons:
+        if button.get_attribute('data-value') == data_value:
+            return button
+    return None
+
 class MarketSurvey():
     """
     Market Survey class used to search available listings
@@ -111,7 +127,7 @@ class MarketSurvey():
             WebDriverWait(self.driver,20).until(EC.presence_of_element_located((By.CSS_SELECTOR, "a.property-link")))
         except TimeoutException:
             logging.warning("Finding this area took too long (>20 seconds)")
-    def filterArea(self,min_price = None,max_price = None):
+    def filterArea(self,min_price = None,max_price = None,target_bed = None):
         """Filter the active Area search page to look for apartments
         between <min_price> and <max_price>
 
@@ -119,17 +135,25 @@ class MarketSurvey():
             min_price (number, optional): Minimum apt price. Defaults to None.
             max_price (number, optional): Maximum apt price. Defaults to None.
         """
-        filter_button = self.driver.find_element(By.ID, "rentRangeLink")
+        filter_button = self.driver.find_element(By.ID, "advancedFiltersIcon")
         filter_button.click()
         time.sleep(0.5)
+        
         if min_price:
-            min_area = self.driver.find_element(By.ID,"min-input")
+            min_area = self.driver.find_element(By.CSS_SELECTOR,'input.min-rent-select')
             min_area.send_keys(min_price)
         if max_price:
-            max_area = self.driver.find_element(By.ID,"max-input")
+            max_area = self.driver.find_element(By.CSS_SELECTOR,"input.max-rent-select")
             max_area.send_keys(max_price)
+        #bed_button = self.driver.find_element(By.ID, 'bedRangeLink')
+        if target_bed:
+            button_group = self.driver.find_element(By.CSS_SELECTOR,'div.button-group-container')
+            target_button = find_button_by_data_value(button_group, str(target_bed) if target_bed != 0 else "-1")
+            #logging.info(target_button.get_attribute('data-value'))
+            if target_button:
+                self.driver.execute_script("arguments[0].click();", target_button)
         
-        button = self.driver.find_element(By.CLASS_NAME, "done-btn")
+        button = self.driver.find_element(By.ID,"seeResultBtn")
         button.click()
         time.sleep(0.5)
     def getAreaLinks(self):
@@ -330,13 +354,13 @@ class MarketSurvey():
             model['Address'] = address
             model['URL'] = link
         return properties
-    def getAreaData(self, area, property,min_price = None,max_price = None):
+    def getAreaData(self, area, property,min_price = None,max_price = None,target_beds = None):
         #Search for the area on apartments.com
         self.findArea(area)
         
         #Filter the area
         if min_price or max_price:
-            self.filterArea(min_price,max_price)
+            self.filterArea(min_price,max_price,target_beds)
             time.sleep(2)
         #Get the links for the comps in the area
         self.getAreaLinks()
@@ -404,7 +428,7 @@ class MarketSurvey():
         total_props = len(input_df)
         #Get the dynamic competitor data for each area in the input dataframe
         for index,row in input_df.iterrows():
-            self.getAreaData(row["Area"],row["Property Name"],row["Min Price"],row["Max Price"])
+            self.getAreaData(row["Area"],row["Property Name"],row["Min Price"],row["Max Price"],row["Beds"])
             if self.verbose == True:
                 logging.info(f"Market Survey complete for {row['Area']}. Survey {np.round((index + 1)/total_props,4) * 100}% complete")
         #Update dataframe with self-contained data
@@ -446,7 +470,7 @@ class MarketSurvey():
         logging.info(f"Data saved to {file_path}")
     def to_excel(self, mode, file_path,sheetname):
         if mode not in ['overwrite', 'append']:
-            raise ValueError("Mode must be 'overwrite' or 'append'")
+            raise ValueError("Mode must be 'overwrite' or 'append']")
         
         if mode == 'overwrite':
             # Overwrite the file by writing the DataFrame to a new Excel file
@@ -464,7 +488,7 @@ class MarketSurveyParallel(MarketSurvey):
         """Helper method for parallel execution of area data scraping"""
         #Create a nested Market Survey Object (inits a new driver)
         survey = MarketSurvey(headless=headless, verbose=verbose, ncomps=ncomps)
-        survey.getAreaData(row["Area"], row["Property Name"], row.get("Min Price"), row.get("Max Price"))
+        survey.getAreaData(row["Area"], row["Property Name"], row.get("Min Price"), row.get("Max Price"),row.get(['Beds']))
         survey.quit()  # Close the webdriver for this instance
         return survey.data  # Return the scraped data
 
